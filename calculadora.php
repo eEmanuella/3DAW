@@ -10,8 +10,20 @@
              $resultado = $a - $b;
         } elseif ($o == "multiplicacao") {
              $resultado = $a * $b;
-        } else {
-             $resultado = $a / $b;
+        } elseif ($o == "divisao") {
+            if ($b != 0) {
+                 $resultado = $a / $b;
+            } else {
+                $resultado = "Erro.";
+            }
+        } elseif ($o == "potenciacao") {
+            $resultado = pow($a, $b);
+        } elseif ($o == "radiciacao") {
+            if ($b !=0 && $b > 0) {
+                $resultado = pow($a, 1/$b);
+            } else {
+                $resultado = "Erro.";
+            }
         }
 
 }
@@ -31,6 +43,8 @@
         <option value="subtracao">Subtrair</option>
         <option value="multiplicacao">Multiplicar</option>
         <option value="divisao">Dividir</option>
+        <option value="potenciacao">Potencia</option>
+        <option value="radiciacao">Raiz</option>
     </select>
     <br><br>
     <input type="submit" value="Calcular">
