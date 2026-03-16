@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')  {
     $linha = $nome . ";" . $matricula . ";" . $email . "\n";
     fwrite($arqAlunos,$linha);
     fclose($arqAlunos);
-    $msg = "Deu tudo certo!!!";
+    $msg = "Cadastro realizado com sucesso.";
 }
 ?>
 <!DOCTYPE html>
