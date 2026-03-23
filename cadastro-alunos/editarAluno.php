@@ -59,11 +59,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET["matricula"])) {
 <body>
 <h1>Editar Aluno</h1>
 <form action="editarAluno.php" method="POST">
-    Nome: <input type="text" name="nome" value="<?php echo $nome ?>"
+    Nome: <input type="text" name="nome" value="<?php echo $nome ?>">
     <br><br>
-    Matrícula: <input type="text" name="matricula" value="<?php echo $matricula ?>"
+    Matrícula: <input type="text" name="matricula" value="<?php echo $matricula ?>" readonly>
     <br><br>
-    E-mail: <input type="text" name="email" value="<?php echo $email ?>"
+    E-mail: <input type="text" name="email" value="<?php echo $email ?>">
     <br><br>
     <input type="submit" value="Salvar Alterações">
 </form>
