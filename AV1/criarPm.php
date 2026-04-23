@@ -1,11 +1,11 @@
 <?php
-$pergunta: "";
-$respostaA: "";
-$respostaB: "";
-$respostaC: "";
-$respostaD: "";
+$pergunta = "";
+$respostaA = "";
+$respostaB = "";
+$respostaC = "";
+$respostaD = "";
 
-if ($_SERVER('REQUEST_METHOD') == $_POST) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $pergunta = $_POST["pergunta"];
     $respostaA = $_POST["respostaA"];
     $respostaB = $_POST["respostaB"];
@@ -13,16 +13,16 @@ if ($_SERVER('REQUEST_METHOD') == $_POST) {
     $respostaD = $_POST["respostaD"];
 
     if (!file_exists("PergM.txt")) {
-        $arqPergM = fopen("PergM.txt") or die("erro ao criar arquivo");
-        $lnha = "pergunta;respostaA:respostaB;respostaC;respostaD";
-        fwrite($arqPergM, $linha)
-        fclose($arqPergM)
+        $arqPergM = fopen("PergM.txt", "w") or die("erro ao criar arquivo");
+        $linha = "pergunta;respostaA:respostaB;respostaC;respostaD\n";
+        fwrite($arqPergM, $linha);
+        fclose($arqPergM);
     }
 
     $arqPergM = fopen("PergM.txt", "a") or die("erro ao criar arquivo");
     $linha = $pergunta . ";" . $respostaA . ";" . $respostaB .";" . $respostaC .";" . $respostaD . "\n";
-    fwrite($arqPergM, $linha)
-    fclose($arqPergM)
+    fwrite($arqPergM, $linha);
+    fclose($arqPergM);
 }
 ?>
 
@@ -30,12 +30,17 @@ if ($_SERVER('REQUEST_METHOD') == $_POST) {
 <head></head>
 <body>
     <h1>Cadrastrar perguntas e respostas</h1>
-    <form action="PergM.txt" method="POST">
+    <form action="criarPm.php" method='POST'>
         Pergunta: <input type="text" name="pergunta">
-        Letra a: <input type="text" name="resposaA">
+        <br><br>
+        Letra a: <input type="text" name="respostaA">
+        <br><br>
         Letra b: <input type="text" name="respostaB">
+        <br><br>
         Letra c: <input type="text" name="respostaC">
-        Letra d: <input type="text" name="resposta">
+        <br><br>
+        Letra d: <input type="text" name="respostaD">
+        <br><br>
         <input type="submit" value="Cadastrar pergunta">
     </form>
 </body>
