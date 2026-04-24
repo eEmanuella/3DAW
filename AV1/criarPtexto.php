@@ -1,4 +1,5 @@
 <?php
+$msg = "";
 $pergunta = "";
 $resposta = "";
 
@@ -17,6 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $linha = $pergunta . ";" . $resposta . "\n";
     fwrite($arqPtexto, $linha);
     fclose($arqPtexto);
+
+    $msg = "Cadastro realizado com sucesso.";
 }
 ?>
 
@@ -31,5 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <br><br>
         <input type="submit" value="Cadastrar pergunta">
     </form>
+<p><?php echo $msg ?></p>
 </body>
 </html>
