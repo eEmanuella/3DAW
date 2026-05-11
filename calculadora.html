@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Minha Calculadora</h1>
+
+<form id="calculadora">
+    a: <input type="number" id="a"><br>
+    b: <input type="number" id="b">
+
+    <select id="operacao">
+        <option value="soma">Somar</option>
+        <option value="subtracao">Subtrair</option>
+        <option value="multiplicacao">Multiplicar</option>
+        <option value="divisao">Dividir</option>
+        <option value="potenciacao">Potencia</option>
+        <option value="radiciacao">Raiz</option>
+    </select>
+    <br><br>
+    <button type="button" onclick="calcular()">Calcular</button>
+</form>
+
+<h3 id="displayResultado">Resultado: </h3>
+
+<script>
+    function calcular() {
+        let a = parseFloat(document.getElementById('a').value);
+        let b = parseFloat(document.getElementById('b').value);
+        let o = document.getElementById('operacao').value;
+        let resultado;
+
+        if (o === "soma") {
+            resultado = a + b;
+        } else if (o === "subtracao") {
+            resultado = a - b;
+        } else if (o === "multiplicacao") {
+            resultado = a * b;
+        } else if (o === "divisao") {
+            if (b !== 0) {
+                resultado = a / b;
+            } else {
+                resultado = "Erro";
+            }
+        } else if (o === "potenciacao") {
+            resultado = Math.pow(a, b);
+        } else if (o === "radiciacao") {
+            if (b !== 0 && b>0) {
+                resultado = Math.pow(a, 1/b);
+            } else {
+                resultado = "Erro";
+            }
+        }
+
+        document.getElementById('displayResultado').innerText = "Resultado: " + resultado;
+
+    }
+</script>
+
+</body>
+</html>
