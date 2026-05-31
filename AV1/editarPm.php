@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET["pergunta"])) {
 <head>
 </head>
 <body>
-<h1>Editar Aluno</h1>
+<h1>Editar Pergunta</h1>
 <form action="editarPm.php" method="POST">
     Pergunta: <input type="text" name="pergunta" value="<?php echo $pergunta ?>" readonly>
     <br><br>
