@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>AV1 com Banco de Dados</title>
+</head>
+<body>
+    <h2>Cadastrar Pergunta</h2>
+
+    <form id="formCadastro">
+
+        <input type="hidden" id="idPerguntaEdicao" value="">
+
+        <label>Pergunta:</label><br>
+        <input type="text" id="txtPergunta" required><br><br>
+
+        <label>Tipo de Pergunta:</label><br>
+        <select id="selectTipo">
+            <option value="texto">Pergunta de Texto</option>
+            <option value="multipla_escolha">Múltipla Escolha</option>
+        </select><br><br>
+
+        <div id="blocoAlternativas">
+            <input type="text" id="altA" placeholder="Alternativa A"><br>
+            <input type="text" id="altB" placeholder="Alternativa B"><br>
+            <input type="text" id="altC" placeholder="Alternativa C"><br>
+            <input type="text" id="altD" placeholder="Alternativa D"><br><br>
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+
+    <h2>Perguntas Salvas</h2>
+
+    <div id="listaPerguntas"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

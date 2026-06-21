@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS perguntas_db;
+USE perguntas_db;
+
+CREATE TABLE IF NOT EXISTS perguntas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    texto_pergunta TEXT NOT NULL,
+    tipo VARCHAR(20) NOT NULL, 
+    alt_a VARCHAR(255) DEFAULT NULL,
+    alt_b VARCHAR(255) DEFAULT NULL,
+    alt_c VARCHAR(255) DEFAULT NULL,
+    alt_d VARCHAR(255) DEFAULT NULL
+);
