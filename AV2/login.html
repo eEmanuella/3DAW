@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Entrar / Cadastrar</title>
+</head>
+<body>
+
+    <div id="secaoLogin">
+        <h2>Acessar Minha Conta</h2>
+        <form id="formLogin">
+            <label>E-mail:</label><br>
+            <input type="email" id="loginEmail" required><br><br>
+
+            <label>Senha:</label><br>
+            <input type="password" id="loginSenha" required><br><br>
+
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="#" id="linkIrParaCadastro">Cadastre-se aqui</a></p>
+    </div>
+
+    <div id="secaoCadastro" style="display: none;">
+        <h2>Criar Nova Conta</h2>
+        <form id="formCadastro">
+            <label>Nome Completo:</label><br>
+            <input type="text" id="cadNome" required><br><br>
+
+            <label>E-mail:</label><br>
+            <input type="email" id="cadEmail" required><br><br>
+
+            <label>Senha:</label><br>
+            <input type="password" id="cadSenha" required><br><br>
+
+            <button type="submit">Finalizar Cadastro</button>
+        </form>
+        <p>Já tem uma conta? <a href="#" id="linkIrParaLogin">Faça o login aqui</a></p>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

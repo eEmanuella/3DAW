@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS salao;
+USE salao;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS agendamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL, 
+    data_hora DATETIME NOT NULL,
+    categoria VARCHAR(50) NOT NULL,
+    especificacao VARCHAR(100) NOT NULL,
+    profissional VARCHAR(100) NOT NULL,
+    metodo_pagamento VARCHAR(50) NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+);
