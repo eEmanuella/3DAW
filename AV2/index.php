@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: login.html");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -63,9 +71,9 @@
             </select><br><br>
         </div>
 
-        <div id="blocoMassagens" style="display: none;">
+        <div id="blocoMassagen" style="display: none;">
             <label>Procedimentos de Massagem:</label><br>
-            <select id="selectMassagens">
+            <select id="selectMassagen">
                 <option value="">Escolha o procedimento</option>
                 <option value="massagem_marreta">Massagem com Marreta (1h) - R$ 70,00</option>
             </select><br><br>
@@ -88,9 +96,9 @@
                 <option value="miriam_sobrancelha">Mirian (Designer de Sobrancelha)</option>
             </optgroup>
             <optgroup label="Todos os profissionais">
-                <option value="josé_cabeleireiro">José Cabeleireiro</option>
-                <option value="joao_manicure">João Manicure</option>
-                <option value="maria_massagista">Maria Massagista</option>
+                <option value="josé_cabeleireiro">José (Cabeleireiro)</option>
+                <option value="joao_manicure">João (Manicure)</option>
+                <option value="maria_massagista">Maria (Massagista)</option>
             </optgroup>
         </select><br><br>
 
@@ -123,6 +131,6 @@
         
     </form>
 
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
