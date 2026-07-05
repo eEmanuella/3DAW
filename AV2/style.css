@@ -1,0 +1,161 @@
+:root {
+    --rosa-escuro: #d92b75;
+    --rosa-claro: #fce4ec;
+    --branco: #ffffff;
+    --texto-escuro: #4a4a4a;
+    --borda: #f8bbd0;
+    --fonte: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte);
+    background-color: var(--rosa-claro);
+    color: var(--texto-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+#formAgendamento, #secaoLogin, #secaoCadastro {
+    background-color: var(--branco);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(217, 43, 117, 0.12);
+    width: 100%;
+    max-width: 520px;
+    border: 1px solid rgba(217, 43, 117, 0.15);
+}
+
+#formLogin, #formCadastro {
+    width: 100%;
+}
+
+h2 {
+    color: var(--rosa-escuro);
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+h4 {
+    color: var(--rosa-escuro);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-bottom: 2px dashed var(--borda);
+    padding-bottom: 0.5rem;
+}
+
+label {
+    display: block;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+    color: var(--texto-escuro);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="datetime-local"],
+select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--borda);
+    border-radius: 8px;
+    background-color: var(--branco);
+    color: var(--texto-escuro);
+    font-family: var(--fonte);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: var(--rosa-escuro);
+    box-shadow: 0 0 0 4px rgba(217, 43, 117, 0.15);
+}
+
+optgroup {
+    font-weight: bold;
+    color: var(--rosa-escuro);
+    background-color: var(--branco);
+}
+
+optgroup option {
+    font-weight: normal;
+    color: var(--texto-escuro);
+}
+
+#blocoCabelo, #blocoManicure, #blocoBarba, 
+#blocoSobrancelhas, #blocoMassagen, #blocoPacotes,
+#blocoCartao, #blocoPix {
+    background-color: rgba(252, 228, 236, 0.4);
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--rosa-escuro);
+}
+
+#blocoPix p {
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--texto-escuro);
+    padding: 0.5rem 0;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: var(--rosa-escuro);
+    color: var(--branco);
+    border: none;
+    padding: 0.9rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #b81d5b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(217, 43, 117, 0.3);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+p {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--texto-escuro);
+}
+
+p a {
+    color: var(--rosa-escuro);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+p a:hover {
+    color: #b81d5b;
+    text-decoration: underline;
+}

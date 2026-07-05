@@ -11,11 +11,12 @@ if (!isset($_SESSION['usuario_id'])) {
 <head>
 <meta charset="UTF-8">
 <title>Agendamento</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h2>Marcar Atendimento</h2>
     <form id="formAgendamento">
+        <h2>Marcar Atendimento</h2>
         
         <label>Data e Hora do Atendimento:</label><br>
         <input type="datetime-local" id="datahora" min="2026-06-22T08:00" required>
