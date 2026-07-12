@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const resultado = await resposta.json();
 
                 if (resultado.status === "sucesso") {
-                    window.location.href = "index.php";
+                    localStorage.setItem("usuario_logado", "true");
+                    window.location.href = "index.html";
                 } else {
                     alert(resultado.mensagem);
                 }

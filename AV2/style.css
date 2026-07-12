@@ -115,7 +115,7 @@ optgroup option {
     padding: 0.5rem 0;
 }
 
-button[type="submit"] {
+button {
     width: 100%;
     background-color: var(--rosa-escuro);
     color: var(--branco);
@@ -131,14 +131,33 @@ button[type="submit"] {
     transition: all 0.3s ease;
 }
 
-button[type="submit"]:hover {
+button[type="submit"], #btnAvancar, #btnFinalizar {
+    background-color: var(--rosa-escuro);
+    color: var(--branco);
+    border: none;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover, #btnAvancar:hover, #btnFinalizar:hover {
     background-color: #b81d5b;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(217, 43, 117, 0.3);
 }
 
-button[type="submit"]:active {
+button[type="submit"]:active, #btnAvancar:active, #btnFinalizar:active {
     transform: translateY(0);
+}
+
+#btnVoltar {
+    background-color: transparent;
+    color: var(--rosa-escuro);
+    border: 2px solid var(--rosa-escuro);
+    margin-top: 1rem;
+}
+
+#btnVoltar:hover {
+    background-color: var(--rosa-claro);
+    transform: translateY(-2px);
 }
 
 p {
